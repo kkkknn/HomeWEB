@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../util/layui/css/layui.css">
+    <title>kkkkkn的个人小屋</title>
+</head>
+<body>
+<!-- 你的HTML代码 -->
+
+<div class="layui-row">
+        <ul class="layui-nav layui-nav-tree layui-nav-side">
+            <li  style="text-align: center">
+                <a href="" style="color: #8d8d8d;font-size: 14pt">
+                    <img alt="图像加载失败" src="../img/homeIcon.jpg" style="max-width: 80px;max-height: 80px" class="layui-circle layui-inline">
+                    <br>努力就有收获
+                </a>
+            </li>
+            <li class="layui-nav-item ">
+                <a href="javascript:;">个人博客</a>
+                <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                    <dd><a href="">移动模块</a></dd>
+                    <dd><a href="">后台模版</a></dd>
+                    <dd><a href="">电商平台</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">在线影院</a>
+                <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                    <dd><a href="">移动模块</a></dd>
+                    <dd><a href="">后台模版</a></dd>
+                    <dd><a href="">电商平台</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">在线漫画</a>
+                <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                    <dd><a href="">移动模块</a></dd>
+                    <dd><a href="">后台模版</a></dd>
+                    <dd><a href="">电商平台</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">在线小说</a>
+                <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                    <dd><a href="">移动模块</a></dd>
+                    <dd><a href="">后台模版</a></dd>
+                    <dd><a href="">电商平台</a></dd>
+                </dl>
+            </li>
+        </ul>
+    <div class="layui-fluid">
+        <span class="layui-breadcrumb">
+            <a href="">首页</a>
+            <a href="">国际新闻</a>
+            <a href="">亚太地区</a>
+            <a><cite>正文</cite></a>
+        </span>
+    </div>
+</div>
+
+
+<script src="../util/layui/layui.js"></script>
+<script>
+    //一般直接写在一个js文件中
+
+    layui.use(['layer', 'form','element','util'], function(){
+        var layer = layui.layer
+            ,util=layui.util
+            ,form = layui.form;
+        util.fixbar({
+            top:true
+            , css: { right: 15, bottom: 35 }
+            , bgcolor: '#2a96ff !important;display:block;'
+            ,showHeight:100
+            , click: function (type) {
+                if (type === 'top') {
+                    $('.layui-body').animate({//主要代码
+                        scrollTop: 0
+                    }, 200);
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>
