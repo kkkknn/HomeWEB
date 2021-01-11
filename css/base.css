@@ -1,0 +1,9 @@
+.div_center{
+    text-align: center;
+}
+.img_center{
+    vertical-align: middle;
+}
+.img_gray{
+    filter: url('../util/gray.svg#grayscale');
+}
