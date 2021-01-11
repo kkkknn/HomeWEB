@@ -1,126 +1,1 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../util/layui/css/layui.css">
-    <title>kkkkkn的个人小屋</title>
-</head>
-<body class="layui-layout-body">
-<!-- 你的HTML代码 -->
-<div class="layui-layout layui-layout-admin">
-    <div class="layui-header">
-        <div class="layui-logo ">
-            <a href="">
-                <img style="max-height: 100%"  src="../img/logo.png"/>
-            </a>
-        </div>
-        <!-- 头部区域（可配合layui已有的水平导航） -->
-        <!--<ul class="layui-nav layui-layout-left">
-            <li class="layui-nav-item"><a href="">控制台</a></li>
-            <li class="layui-nav-item"><a href="">商品管理</a></li>
-            <li class="layui-nav-item"><a href="">用户</a></li>
-            <li class="layui-nav-item">
-                <a href="javascript:;">其它系统</a>
-                <dl class="layui-nav-child">
-                    <dd><a href="">邮件管理</a></dd>
-                    <dd><a href="">消息管理</a></dd>
-                    <dd><a href="">授权管理</a></dd>
-                </dl>
-            </li>
-        </ul>
-        <ul class="layui-nav layui-layout-right">
-            <li class="layui-nav-item">
-                <a href="javascript:;">
-                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
-                    贤心
-                </a>
-                <dl class="layui-nav-child">
-                    <dd><a href="">基本资料</a></dd>
-                    <dd><a href="">安全设置</a></dd>
-                </dl>
-            </li>
-            <li class="layui-nav-item"><a href="">退了</a></li>
-        </ul>-->
-    </div>
-
-    <div class="layui-side layui-bg-black">
-        <div class="layui-side-scroll">
-            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
-            <ul class="layui-nav layui-nav-tree"  lay-filter="test ">
-                <li class="layui-nav-item layui-nav-itemed"><a class="" href="javascript:;">个人博客</a></li>
-                <li class="layui-nav-item"><a href="javascript:;">在线影院</a></li>
-                <li class="layui-nav-item"><a href="javascript:;">在线漫画</a></li>
-                <li class="layui-nav-item"><a href="javascript:;">在线小说</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="layui-body ">
-        <!-- 内容主体区域 -->
-        <div style="padding: 1px;">
-
-            <ul class="flow-default site-demo-flow"  id="LAY_demo1"></ul><br>
-
-        </div>
-        <!--<iframe src="http://www.kkkkknn.com/" frameborder="0" class="layadmin-iframe" name="iframeMain"
-                style="width: 100%; height:85%;"></iframe>-->
-
-
-    </div>
-
-    <div class="layui-footer">
-        <!-- 底部固定区域 -->
-        © layui.com - 底部固定区域
-        <div id="test2">1232</div>
-    </div>
-</div>
-
-<script src="../util/layui/layui.js"></script>
-<script>
-    //一般直接写在一个js文件中
-    layui.use('flow', function() {
-        var flow = layui.flow;
-        flow.load({
-            elem: '#LAY_demo1' //流加载容器
-            ,isAuto: true
-            ,scrollElem:".layui-body"//监听的加载框
-            ,done: function(page, next){ //执行下一页的回调
-                //模拟数据插入
-                setTimeout(function(){
-                    var lis = [];
-                    for(var i = 0; i < 8; i++){
-                        lis.push('<li style="float: left">'+((page-1)*8 + i + 1)+'</li>')
-                    }
-
-                    //执行下一页渲染，第二参数为：满足“加载更多”的条件，即后面仍有分页
-                    //pages为Ajax返回的总页数，只有当前页小于总页数的情况下，才会继续出现加载更多
-                    next(lis.join(''), page < 20); //假设总页数为 10
-                }, 500);
-            }
-        });
-    });
-    layui.use(['layer', 'form','element','util','flow'], function(){
-        var layer = layui.layer
-            ,util=layui.util
-            ,flow = layui.flow
-            ,$=layui.$
-            ,form = layui.form;
-        util.fixbar({
-            top:true
-            , css: { right: 15, bottom: 35 }
-            , bgcolor: '#2a96ff !important;display:block;'
-            ,showHeight:100
-            , click: function (type) {
-                if (type === 'top') {
-                    $('.layui-body').animate({//主要代码
-                        scrollTop: 0
-                    }, 200);
-                }
-            }
-        });
-
-    });
-
-</script>
-</body>
-</html>
+<!DOCTYPE html><html lang="en"><head>    <meta charset="UTF-8">    <link rel="stylesheet" href="../util/layui/css/layui.css">    <title>kkkkkn的个人小屋</title></head><body class="layui-layout-body"><!-- 你的HTML代码 --><div class="layui-layout layui-layout-admin">    <div class="layui-header">        <a class="layui-logo" href="index.html">            <img src="../img/logo.png" alt="kkkkkn的个人站">        </a>        <!--<ul class="layui-nav layui-layout-right">            <li class="layui-nav-item">                <a href="">控制台<span class="layui-badge">9</span></a>            </li>            <li class="layui-nav-item">                <a href="">个人中心<span class="layui-badge-dot"></span></a>            </li>            <li class="layui-nav-item">                <a href=""><img src="../img/user.jpg" class="layui-nav-img">管理员</a>                <dl class="layui-nav-child">                    <dd><a href="javascript:;">修改信息</a></dd>                    <dd><a href="javascript:;">安全管理</a></dd>                    <dd><a href="javascript:;">退了</a></dd>                </dl>            </li>        </ul>-->    </div>    <div class="layui-side layui-bg-black">        <div class="layui-side-scroll">            <ul class="layui-nav layui-nav-tree"  lay-filter="test ">                <li class="layui-nav-item"><a href="opgg_util.html">OPGG查询</a></li>                <li class="layui-nav-item"><a href="http://www.kkkkknn.com/">个人博客</a></li>            </ul>        </div>    </div>    <div class="layui-body ">        <!-- 内容主体区域 -->    </div>    <div class="layui-footer">        <!-- 底部固定区域 -->        <div id="thisTime">当前服务器时间:</div>        © layui.com - 底部固定区域    </div></div><script src="../util/layui/layui.js"></script><script src="../js/base.js"></script><script></script></body></html>
